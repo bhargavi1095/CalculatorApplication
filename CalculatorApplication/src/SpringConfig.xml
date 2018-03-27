@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="addition" class="com.calculator.ArithmeticOperation">
+		<constructor-arg  ref="add2num" />
+	</bean>
+
+	<bean id="add2num" class="com.calculator.Addition">
+		<property name="a" value="2"></property>
+		<property name="b" value="7"></property>
+	</bean>
+	  
+
+	<bean id="subtraction" class="com.calculator.ArithmeticOperation">
+		<constructor-arg  ref="sub2num" />
+	</bean>
+
+	<bean id="sub2num" class="com.calculator.Subtraction">
+		<property name="a" value="9"></property>
+		<property name="b" value="7"></property>
+	</bean>
+	
+	
+	<bean id="multiplication" class="com.calculator.ArithmeticOperation">
+		<constructor-arg  ref="mul2num" />
+	</bean>
+
+	<bean id="mul2num" class="com.calculator.Multiplication">
+		<property name="a" value="5"></property>
+		<property name="b" value="5"></property>
+ 
+	</bean>
+	
+	
+	<bean id="division" class="com.calculator.ArithmeticOperation">
+		<constructor-arg  ref="div2num" />
+		 </bean>
+
+	<bean id="div2num" class="com.calculator.Division">
+		<property name="a" value="10"></property>
+		<property name="b" value="2"></property>
+	</bean>
+</beans>
